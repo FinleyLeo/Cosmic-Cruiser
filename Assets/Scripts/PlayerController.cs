@@ -1,93 +1,109 @@
+using TMPro;
 using UnityEngine;
+
+public enum States
+{
+    Idle,
+    Turning,
+    Boosting,
+    TurnBoosting
+}
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] bool leftActive, rightActive, dualActive;
+    [SerializeField] bool leftDetected, rightDetected, thrustDetected;
     [SerializeField] float turnSpeed = 5f, maxTurnSpeed = 250f;
-    int dir = 0; // -1 left, 1 right
+    [SerializeField] TextMeshProUGUI statesDebugMenu;
+    int dir = 0; // 1 left, -1 right
 
     Rigidbody2D rb;
 
-    private void Awake()
-    {
-        Input.multiTouchEnabled = true;
-    }
+    public States state;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        state = States.Idle;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        statesDebugMenu.text = "State: " + state.ToString();
         CheckForInput();
     }
 
     private void FixedUpdate()
     {
-        if (dualActive)
+        if (state == States.Turning || state == States.TurnBoosting)
         {
-            // Do super pogo
-        }
-
-        else
-        {
-            if (rightActive || leftActive)
+            // Only add torque if the angular velocity is below the max turn speed
+            if (rb.angularVelocity < maxTurnSpeed && rb.angularVelocity > -maxTurnSpeed)
             {
-                // Only add torque if the angular velocity is below the max turn speed
-                if (rb.angularVelocity < maxTurnSpeed && rb.angularVelocity > -maxTurnSpeed)
-                {
-                    rb.AddTorque(dir * turnSpeed);
-                }
+                rb.AddTorque(dir * turnSpeed);
+            }
 
-                else
-                {
-                    // Clamp the angular velocity to the max turn speed
-                    rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -maxTurnSpeed, maxTurnSpeed);
-                }
+            else
+            {
+                // Clamp the angular velocity to the max turn speed
+                rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -maxTurnSpeed, maxTurnSpeed);
             }
         }
     }
 
     void CheckForInput()
     {
-        leftActive = false;
-        rightActive = false;
-
-
-        //Checks if there are any touch inputs
+        //Checks if pressing any button, and sets sate accordingly
         if (Input.touchCount > 0)
         {
-            for (int i = 0; i < Input.touchCount; i++)
+            if (leftDetected)
             {
-                Touch touch = Input.touches[i];
+                dir = 1;
+                state = States.Turning;
+            }
 
-                if (touch.position.x > (Screen.width / 2))
+            if (rightDetected)
+            {
+                dir = -1;
+                state = States.Turning;
+            }
+
+            if (thrustDetected)
+            {
+                if (state == States.Turning)
                 {
-                    rightActive = true;
-                    dir = -1;
+                    state = States.TurnBoosting;
                 }
 
                 else
                 {
-                    leftActive = true;
-                    dir = 1;
+                    state = States.Boosting;
                 }
             }
         }
 
-        if (rightActive && leftActive)
-        {
-            dualActive = true;
-            Debug.Log("Both active");
-        }
-
         else
         {
-            dualActive = false;
+            state = States.Idle;
+
+            leftDetected = false;
+            rightDetected = false;
+            thrustDetected = false;
         }
+    }
+
+    public void CheckForLeft(bool toggle)
+    {
+        leftDetected = toggle;
+    }
+
+    public void CheckForRight(bool toggle)
+    {
+        rightDetected = toggle;
+    }
+
+    public void CheckForThrust(bool toggle)
+    {
+        thrustDetected = toggle;
     }
 }
 
