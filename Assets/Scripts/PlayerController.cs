@@ -1,93 +1,131 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public enum States
+public enum BaseStates
 {
+    Grounded,
     Idle,
+    Boosting
+}
+
+public enum TurnStates
+{
     Turning,
-    Boosting,
-    TurnBoosting
+    None
 }
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] bool leftDetected, rightDetected, thrustDetected;
-    [SerializeField] float turnSpeed = 5f, maxTurnSpeed = 250f;
-    [SerializeField] TextMeshProUGUI statesDebugMenu;
+    [SerializeField] bool leftDetected, rightDetected, thrustDetected, levelStarted;
+    [SerializeField] float turnSpeed = 8f, thrustForce = 40f, maxForce = 80f;
     int dir = 0; // 1 left, -1 right
+
+    [SerializeField] TextMeshProUGUI statesDebugText, turnStatesDebugText;
+    [SerializeField] GameObject fire;
 
     Rigidbody2D rb;
 
-    public States state;
+    public BaseStates state;
+    public TurnStates turnState;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        state = States.Idle;
+        state = BaseStates.Grounded;
     }
 
     void Update()
     {
-        statesDebugMenu.text = "State: " + state.ToString();
         CheckForInput();
-    }
+        statesDebugText.text = "State: " + state.ToString();
+        turnStatesDebugText.text = "Turn State: " + turnState.ToString();
 
-    private void FixedUpdate()
-    {
-        if (state == States.Turning || state == States.TurnBoosting)
+        if (state == BaseStates.Grounded)
         {
-            // Only add torque if the angular velocity is below the max turn speed
-            if (rb.angularVelocity < maxTurnSpeed && rb.angularVelocity > -maxTurnSpeed)
+            if (thrustDetected && !levelStarted)
             {
-                rb.AddTorque(dir * turnSpeed);
-            }
+                rb.AddForce(Vector3.up * 12.5f, ForceMode2D.Impulse);
+                levelStarted = true;
 
-            else
-            {
-                // Clamp the angular velocity to the max turn speed
-                rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -maxTurnSpeed, maxTurnSpeed);
+                StartCoroutine(LaunchDelay());
             }
         }
-    }
 
-    void CheckForInput()
-    {
-        //Checks if pressing any button, and sets sate accordingly
-        if (Input.touchCount > 0)
+        if (state == BaseStates.Boosting)
         {
-            if (leftDetected)
-            {
-                dir = 1;
-                state = States.Turning;
-            }
-
-            if (rightDetected)
-            {
-                dir = -1;
-                state = States.Turning;
-            }
-
-            if (thrustDetected)
-            {
-                if (state == States.Turning)
-                {
-                    state = States.TurnBoosting;
-                }
-
-                else
-                {
-                    state = States.Boosting;
-                }
-            }
+            fire.SetActive(true);
         }
 
         else
         {
-            state = States.Idle;
+            fire.SetActive(false);
+        }
 
-            leftDetected = false;
-            rightDetected = false;
-            thrustDetected = false;
+        // Debug reset
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (turnState == TurnStates.Turning)
+        {
+            rb.angularDamping = 1f;
+            rb.AddTorque(dir * turnSpeed);
+        }
+
+        else
+        {
+            rb.angularDamping = 15f;
+        }
+
+        if (state == BaseStates.Boosting)
+        {
+            rb.linearDamping = 0f;
+            rb.AddForce(transform.up * thrustForce);
+        }
+
+        else
+        {
+            rb.linearDamping = 0.5f;
+        }
+
+        // Apply slight drag to slow down over time
+        rb.AddForce(-rb.linearVelocity * 0.1f);
+
+        // Clamp the maximum velocity
+        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxForce);
+    }
+
+    void CheckForInput()
+    {
+        if (state != BaseStates.Grounded)
+        {
+            if (!thrustDetected)
+            {
+                state = BaseStates.Idle;
+            }
+
+            else
+            {
+                state = BaseStates.Boosting;
+            }
+
+            if (leftDetected || rightDetected)
+            {
+                turnState = TurnStates.Turning;
+                dir = leftDetected ? 1 : -1;
+            }
+
+            else
+            {
+                turnState = TurnStates.None;
+                dir = 0;
+            }
         }
     }
 
@@ -104,6 +142,12 @@ public class PlayerController : MonoBehaviour
     public void CheckForThrust(bool toggle)
     {
         thrustDetected = toggle;
+    }
+
+    IEnumerator LaunchDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        state = BaseStates.Idle;
     }
 }
 

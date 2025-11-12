@@ -1,0 +1,87 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF (void);
+extern void PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33 (void);
+extern void PlayerController_FixedUpdate_m6D906D8B13844542B81CC49BA19760F747CEC8C0 (void);
+extern void PlayerController_CheckForInput_m8DBAC4522A9E556E540B6A4E9CD322A9F82C428B (void);
+extern void PlayerController_CheckForLeft_mA32A2135582C17B6F7EBEB38D4DF0561E1D4540C (void);
+extern void PlayerController_CheckForRight_mA31D073A40F0E684DB80A8E8C2AF2D0938C8D668 (void);
+extern void PlayerController_CheckForThrust_mF7BDD5BAF2996660D4AEEEAA05DF8BD18DA2FDC8 (void);
+extern void PlayerController_LaunchDelay_mACA3A9525D604803F7C79C9A7EC566BB894AF061 (void);
+extern void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (void);
+extern void U3CLaunchDelayU3Ed__21__ctor_m5EE2AC2683ECD068F6131DD922A500BE1A12DA18 (void);
+extern void U3CLaunchDelayU3Ed__21_System_IDisposable_Dispose_m7548A35CCDF80F0A2CFD01AC91C6B8419647A5E3 (void);
+extern void U3CLaunchDelayU3Ed__21_MoveNext_m8626B7669A9F95ED613AEE7F0DBF107BA34A6F87 (void);
+extern void U3CLaunchDelayU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4EC5DA71F582F6D3B8ED7F541DFC671A4507E4FD (void);
+extern void U3CLaunchDelayU3Ed__21_System_Collections_IEnumerator_Reset_m31DCC402002A041F973C7943E35067AE4924DF4C (void);
+extern void U3CLaunchDelayU3Ed__21_System_Collections_IEnumerator_get_Current_mC589548FA87DF117B780784CF361DF82937C8278 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[17] = 
+{
+	PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF,
+	PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33,
+	PlayerController_FixedUpdate_m6D906D8B13844542B81CC49BA19760F747CEC8C0,
+	PlayerController_CheckForInput_m8DBAC4522A9E556E540B6A4E9CD322A9F82C428B,
+	PlayerController_CheckForLeft_mA32A2135582C17B6F7EBEB38D4DF0561E1D4540C,
+	PlayerController_CheckForRight_mA31D073A40F0E684DB80A8E8C2AF2D0938C8D668,
+	PlayerController_CheckForThrust_mF7BDD5BAF2996660D4AEEEAA05DF8BD18DA2FDC8,
+	PlayerController_LaunchDelay_mACA3A9525D604803F7C79C9A7EC566BB894AF061,
+	PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33,
+	U3CLaunchDelayU3Ed__21__ctor_m5EE2AC2683ECD068F6131DD922A500BE1A12DA18,
+	U3CLaunchDelayU3Ed__21_System_IDisposable_Dispose_m7548A35CCDF80F0A2CFD01AC91C6B8419647A5E3,
+	U3CLaunchDelayU3Ed__21_MoveNext_m8626B7669A9F95ED613AEE7F0DBF107BA34A6F87,
+	U3CLaunchDelayU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4EC5DA71F582F6D3B8ED7F541DFC671A4507E4FD,
+	U3CLaunchDelayU3Ed__21_System_Collections_IEnumerator_Reset_m31DCC402002A041F973C7943E35067AE4924DF4C,
+	U3CLaunchDelayU3Ed__21_System_Collections_IEnumerator_get_Current_mC589548FA87DF117B780784CF361DF82937C8278,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[17] = 
+{
+	14411,
+	14411,
+	14411,
+	14411,
+	10676,
+	10676,
+	10676,
+	14195,
+	14411,
+	10803,
+	14411,
+	14008,
+	14195,
+	14411,
+	14195,
+	25155,
+	14411,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	17,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
