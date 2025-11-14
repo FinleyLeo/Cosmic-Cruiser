@@ -212,8 +212,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForThrust
           m_Mode: 6
           m_Arguments:
@@ -228,8 +228,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForThrust
           m_Mode: 6
           m_Arguments:
@@ -376,6 +376,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399681516}
   m_CullTransparentMesh: 1
+--- !u!114 &430951068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4032671267976827666, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+  m_PrefabInstance: {fileID: 7882971547017320891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfd711e4a2a1484c911d4d5c988bc34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonControls
 --- !u!1 &436940657
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +465,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.7735849, g: 0.38314345, b: 0.38314345, a: 1}
   m_FlipX: 0
@@ -657,8 +668,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForRight
           m_Mode: 6
           m_Arguments:
@@ -673,8 +684,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForRight
           m_Mode: 6
           m_Arguments:
@@ -949,7 +960,7 @@ GameObject:
   - component: {fileID: 700154771}
   m_Layer: 0
   m_Name: Test Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1041,13 +1052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5240f8b918a1db249b2a05022e3e12bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  leftDetected: 0
-  rightDetected: 0
-  thrustDetected: 0
-  levelStarted: 0
-  turnSpeed: 8
-  thrustForce: 40
-  maxForce: 80
   statesDebugText: {fileID: 399681518}
   turnStatesDebugText: {fileID: 1527191072}
   fire: {fileID: 587887215}
@@ -1065,10 +1069,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 15
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1180,8 +1184,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForLeft
           m_Mode: 6
           m_Arguments:
@@ -1196,8 +1200,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 700154769}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        - m_Target: {fileID: 430951068}
+          m_TargetAssemblyTypeName: ButtonControls, Assembly-CSharp
           m_MethodName: CheckForLeft
           m_Mode: 6
           m_Arguments:
@@ -1577,7 +1581,7 @@ GameObject:
   - component: {fileID: 1754801094}
   - component: {fileID: 1754801096}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1777,10 +1781,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948109327}
   m_CullTransparentMesh: 1
+--- !u!1001 &7882971547017320891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3560023771414524010, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_Name
+      value: Controls Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753772690985436471, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b470bb281455be8438e6dbd3364937f6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 7882971547017320891}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 700154768}

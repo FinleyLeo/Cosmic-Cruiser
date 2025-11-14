@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum BaseStates
+public enum BoostStates
 {
-    Grounded,
+    Locked,
     Idle,
     Boosting
 }
@@ -18,22 +18,25 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] bool leftDetected, rightDetected, thrustDetected, levelStarted;
-    [SerializeField] float turnSpeed = 8f, thrustForce = 40f, maxForce = 80f;
+    readonly float turnSpeed = 5f, thrustForce = 20f, maxVelocity = 80f, defaultGravity = 1.5f;
+    bool hasStarted = false;
     int dir = 0; // 1 left, -1 right
 
     [SerializeField] TextMeshProUGUI statesDebugText, turnStatesDebugText;
     [SerializeField] GameObject fire;
 
+    ButtonControls buttonControls;
     Rigidbody2D rb;
 
-    public BaseStates state;
+    public BoostStates state;
     public TurnStates turnState;
 
     void Start()
     {
+        buttonControls = ButtonControls.instance;
+
         rb = GetComponent<Rigidbody2D>();
-        state = BaseStates.Grounded;
+        state = BoostStates.Locked;
     }
 
     void Update()
@@ -42,18 +45,7 @@ public class PlayerController : MonoBehaviour
         statesDebugText.text = "State: " + state.ToString();
         turnStatesDebugText.text = "Turn State: " + turnState.ToString();
 
-        if (state == BaseStates.Grounded)
-        {
-            if (thrustDetected && !levelStarted)
-            {
-                rb.AddForce(Vector3.up * 12.5f, ForceMode2D.Impulse);
-                levelStarted = true;
-
-                StartCoroutine(LaunchDelay());
-            }
-        }
-
-        if (state == BaseStates.Boosting)
+        if (state == BoostStates.Boosting)
         {
             fire.SetActive(true);
         }
@@ -72,53 +64,60 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Apply turning torque when in turning state
         if (turnState == TurnStates.Turning)
         {
             rb.angularDamping = 1f;
             rb.AddTorque(dir * turnSpeed);
         }
 
+        // Apply angular damping when not turning
         else
         {
             rb.angularDamping = 15f;
         }
 
-        if (state == BaseStates.Boosting)
+        // Apply thrust force when in boosting state
+        if (state == BoostStates.Boosting)
         {
-            rb.linearDamping = 0f;
+            rb.gravityScale = 0.25f;
+
             rb.AddForce(transform.up * thrustForce);
         }
 
+        // Reset gravity when not boosting
         else
         {
-            rb.linearDamping = 0.5f;
+            rb.gravityScale = defaultGravity;
         }
 
-        // Apply slight drag to slow down over time
-        rb.AddForce(-rb.linearVelocity * 0.1f);
-
         // Clamp the maximum velocity
-        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxForce);
+        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
     }
 
     void CheckForInput()
     {
-        if (state != BaseStates.Grounded)
+        if (state != BoostStates.Locked)
         {
-            if (!thrustDetected)
+            // Manages boosting states
+            if (!buttonControls.thrustDetected && state == BoostStates.Boosting)
             {
-                state = BaseStates.Idle;
+                state = BoostStates.Idle;
+                Debug.Log("Switching to Idle");
             }
 
-            else
+            else if (buttonControls.thrustDetected && state == BoostStates.Idle)
             {
-                state = BaseStates.Boosting;
+                state = BoostStates.Boosting;
+                rb.AddForce(transform.up * thrustForce * 0.05f, ForceMode2D.Impulse);
+                Debug.Log("Switching to Boosting");
             }
 
-            if (leftDetected || rightDetected)
+            // Manages turning states
+            if (buttonControls.leftDetected || buttonControls.rightDetected)
             {
                 turnState = TurnStates.Turning;
-                dir = leftDetected ? 1 : -1;
+                dir = buttonControls.leftDetected ? 1 : -1;
             }
 
             else
@@ -127,27 +126,30 @@ public class PlayerController : MonoBehaviour
                 dir = 0;
             }
         }
+
+        else
+        {
+            if (buttonControls.thrustDetected && !hasStarted)
+            {
+                StartBoost();
+            }
+        }
     }
 
-    public void CheckForLeft(bool toggle)
-    {
-        leftDetected = toggle;
-    }
-
-    public void CheckForRight(bool toggle)
-    {
-        rightDetected = toggle;
-    }
-
-    public void CheckForThrust(bool toggle)
-    {
-        thrustDetected = toggle;
-    }
-
-    IEnumerator LaunchDelay()
+    IEnumerator StateSwitch()
     {
         yield return new WaitForSeconds(0.5f);
-        state = BaseStates.Idle;
+
+        state = BoostStates.Idle;
+        GameEvents.InvokeLevelStarted();
+    }
+
+    void StartBoost()
+    {
+        rb.AddForce(Vector3.up * 8f, ForceMode2D.Impulse);
+        hasStarted = true;
+
+        StartCoroutine(StateSwitch());
     }
 }
 
