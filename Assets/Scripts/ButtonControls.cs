@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonControls : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class ButtonControls : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
+        GameEvents.OnGameOver += ResetLevel;
     }
     public void CheckForLeft(bool toggle)
     {
@@ -31,5 +33,11 @@ public class ButtonControls : MonoBehaviour
     public void CheckForThrust(bool toggle)
     {
         thrustDetected = toggle;
+    }
+
+    // temp
+    void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

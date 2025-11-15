@@ -18,7 +18,7 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    readonly float turnSpeed = 5f, thrustForce = 20f, maxVelocity = 80f, defaultGravity = 1.5f;
+    readonly float turnSpeed = 5f, thrustForce = 20f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 8f;
     bool hasStarted = false;
     int dir = 0; // 1 left, -1 right
 
@@ -42,9 +42,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CheckForInput();
+
         statesDebugText.text = "State: " + state.ToString();
         turnStatesDebugText.text = "Turn State: " + turnState.ToString();
 
+        // temp fire effect
         if (state == BoostStates.Boosting)
         {
             fire.SetActive(true);
@@ -53,12 +55,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             fire.SetActive(false);
-        }
-
-        // Debug reset
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -150,6 +146,20 @@ public class PlayerController : MonoBehaviour
         hasStarted = true;
 
         StartCoroutine(StateSwitch());
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        // Only explode if hitting wall at high enough speed
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            float impactSpeed = other.relativeVelocity.magnitude;
+
+            if (impactSpeed > crashSpeed)
+            {
+                GameEvents.InvokeLevelFailed();
+            }
+        }
     }
 }
 
