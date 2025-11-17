@@ -774,7 +774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Awake_m4C1CD25F38C1AFD74D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:15>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:14>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_0 = ((ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_StaticFields*)il2cpp_codegen_static_fields_for(ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -785,7 +785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Awake_m4C1CD25F38C1AFD74D
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:17>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:16>
 		((ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_StaticFields*)il2cpp_codegen_static_fields_for(ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_il2cpp_TypeInfo_var))->___instance = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&((ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_StaticFields*)il2cpp_codegen_static_fields_for(ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_il2cpp_TypeInfo_var))->___instance), (void*)__this);
 		return;
@@ -793,12 +793,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Awake_m4C1CD25F38C1AFD74D
 
 IL_0014:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:21>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:20>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_2, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:23>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:22>
 		return;
 	}
 }
@@ -812,7 +812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Start_m3FF0281283B77CCCCD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:27>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:26>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
@@ -826,7 +826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Start_m3FF0281283B77CCCCD
 		L_3 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_2, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		__this->___left = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___left), (void*)L_3);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:28>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:27>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_4);
@@ -840,7 +840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Start_m3FF0281283B77CCCCD
 		L_7 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_6, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		__this->___right = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___right), (void*)L_7);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:29>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_8);
@@ -851,7 +851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_Start_m3FF0281283B77CCCCD
 		L_10 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_9, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		__this->___thrust = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___thrust), (void*)L_10);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:30>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:29>
 		return;
 	}
 }
@@ -863,10 +863,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_CheckForLeft_m1F0ADA15710
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B3_0 = NULL;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:34>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:33>
 		bool L_0 = ___0_toggle;
 		__this->___leftDetected = L_0;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:36>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:35>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___left;
 		bool L_2 = ___0_toggle;
 		if (L_2)
@@ -894,7 +894,7 @@ IL_001e:
 	{
 		NullCheck(G_B3_1);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(G_B3_1, G_B3_0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:37>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:36>
 		return;
 	}
 }
@@ -906,10 +906,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_CheckForRight_m6A9611832D
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B3_0 = NULL;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:41>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:40>
 		bool L_0 = ___0_toggle;
 		__this->___rightDetected = L_0;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:43>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:42>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___right;
 		bool L_2 = ___0_toggle;
 		if (L_2)
@@ -937,7 +937,7 @@ IL_001e:
 	{
 		NullCheck(G_B3_1);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(G_B3_1, G_B3_0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:44>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:43>
 		return;
 	}
 }
@@ -949,10 +949,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonControls_CheckForThrust_m5A2FAB78E
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B3_0 = NULL;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:48>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:47>
 		bool L_0 = ___0_toggle;
 		__this->___thrustDetected = L_0;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:50>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:49>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___thrust;
 		bool L_2 = ___0_toggle;
 		if (L_2)
@@ -980,7 +980,7 @@ IL_001e:
 	{
 		NullCheck(G_B3_1);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(G_B3_1, G_B3_0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:51>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/ButtonControls.cs:50>
 		return;
 	}
 }
@@ -1356,7 +1356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameEvents_InvokeLevelStarted_mCDBA727B7
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:11>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:10>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_StaticFields*)il2cpp_codegen_static_fields_for(GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_il2cpp_TypeInfo_var))->___OnLevelStart;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -1389,7 +1389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameEvents_InvokeLevelCompleted_mD9AB7C4
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:12>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:11>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_StaticFields*)il2cpp_codegen_static_fields_for(GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_il2cpp_TypeInfo_var))->___OnGameWin;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -1422,7 +1422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameEvents_InvokeLevelRestarted_mD06BF62
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:13>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:12>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_StaticFields*)il2cpp_codegen_static_fields_for(GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_il2cpp_TypeInfo_var))->___OnLevelReset;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -1455,7 +1455,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameEvents_InvokeLevelFailed_m1FEF535697
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:14>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/GameEvents.cs:13>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_StaticFields*)il2cpp_codegen_static_fields_for(GameEvents_t5451171BFB5DAE3FAF293BF6F54056213C0610B0_il2cpp_TypeInfo_var))->___OnGameOver;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -1511,11 +1511,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Awake_m82639826DE098DC4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:34>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:32>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)PlayerController_Explode_mD39440F807480710642EC2B62381F0BB5C3BAEF7_RuntimeMethod_var), NULL);
 		GameEvents_add_OnGameOver_m8C443EFEF64E1EA888C7925177AA4A435E547B06(L_0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:35>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:33>
 		return;
 	}
 }
@@ -1531,16 +1531,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:39>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:37>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_0 = ((ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_StaticFields*)il2cpp_codegen_static_fields_for(ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92_il2cpp_TypeInfo_var))->___instance;
 		__this->___buttonControls = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___buttonControls), (void*)L_0);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:41>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:39>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_1;
 		L_1 = Component_GetComponent_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_m0712B7A9DBBAE2C319B4B03394E7731B86FACBF2(__this, Component_GetComponent_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_m0712B7A9DBBAE2C319B4B03394E7731B86FACBF2_RuntimeMethod_var);
 		__this->___rb = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___rb), (void*)L_1);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:42>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:40>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_2);
@@ -1551,9 +1551,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71
 		L_4 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(L_3, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
 		__this->___anim = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___anim), (void*)L_4);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:43>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:41>
 		__this->___state = 0;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:44>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:42>
 		return;
 	}
 }
@@ -1561,9 +1561,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:48>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:46>
 		PlayerController_CheckForInput_m8DBAC4522A9E556E540B6A4E9CD322A9F82C428B(__this, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:49>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:47>
 		return;
 	}
 }
@@ -1571,7 +1571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Update_m1F4051EB5BCBCCE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_FixedUpdate_m6D906D8B13844542B81CC49BA19760F747CEC8C0 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:54>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:52>
 		int32_t L_0 = __this->___turnState;
 		if (L_0)
 		{
@@ -1579,11 +1579,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_FixedUpdate_m6D906D8B13
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:56>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:54>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_1 = __this->___rb;
 		NullCheck(L_1);
 		Rigidbody2D_set_angularDamping_m3AB0DF0100B1AF1FA30B078ED479D9B3E54B23FA(L_1, (1.0f), NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:57>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:55>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_2 = __this->___rb;
 		int32_t L_3 = __this->___dir;
 		float L_4 = __this->___turnSpeed;
@@ -1594,7 +1594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_FixedUpdate_m6D906D8B13
 
 IL_0033:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:63>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:61>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_5 = __this->___rb;
 		NullCheck(L_5);
 		Rigidbody2D_set_angularDamping_m3AB0DF0100B1AF1FA30B078ED479D9B3E54B23FA(L_5, (15.0f), NULL);
@@ -1602,7 +1602,7 @@ IL_0033:
 
 IL_0043:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:67>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:65>
 		int32_t L_6 = __this->___state;
 		if ((!(((uint32_t)L_6) == ((uint32_t)2))))
 		{
@@ -1610,11 +1610,11 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:69>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:67>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_7 = __this->___rb;
 		NullCheck(L_7);
 		Rigidbody2D_set_gravityScale_mAFD1A72661304467D20971BBCAA7E04B418F80FD(L_7, (0.5f), NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:71>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:69>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_8 = __this->___rb;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -1633,7 +1633,7 @@ IL_0043:
 
 IL_0084:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:77>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:75>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_14 = __this->___rb;
 		float L_15 = __this->___defaultGravity;
 		NullCheck(L_14);
@@ -1642,7 +1642,7 @@ IL_0084:
 
 IL_0095:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:81>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:79>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_16 = __this->___rb;
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_17 = __this->___rb;
 		NullCheck(L_17);
@@ -1653,7 +1653,7 @@ IL_0095:
 		L_20 = Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9_inline(L_18, L_19, NULL);
 		NullCheck(L_16);
 		Rigidbody2D_set_linearVelocity_mD4C890DE3DF15ECAD0DC61675586C0D1998CC1BB(L_16, L_20, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:82>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:80>
 		return;
 	}
 }
@@ -1672,7 +1672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_CheckForInput_m8DBAC452
 	int32_t G_B12_0 = 0;
 	PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* G_B12_1 = NULL;
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:86>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:84>
 		int32_t L_0 = __this->___state;
 		if (!L_0)
 		{
@@ -1680,7 +1680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_CheckForInput_m8DBAC452
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:89>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:87>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_1 = __this->___buttonControls;
 		NullCheck(L_1);
 		bool L_2 = L_1->___thrustDetected;
@@ -1697,9 +1697,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_CheckForInput_m8DBAC452
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:91>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:89>
 		__this->___state = 1;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:92>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:90>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_4 = __this->___anim;
 		NullCheck(L_4);
 		Animator_Play_m9B1CB1A22951C0B0758AA032F2349B6DD20E96C2(L_4, _stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA, 0, NULL);
@@ -1708,7 +1708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_CheckForInput_m8DBAC452
 
 IL_003b:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:95>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:93>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_5 = __this->___buttonControls;
 		NullCheck(L_5);
 		bool L_6 = L_5->___thrustDetected;
@@ -1725,9 +1725,9 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:97>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:95>
 		__this->___state = 2;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:98>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:96>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_8 = __this->___rb;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -1738,12 +1738,12 @@ IL_003b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_10, L_11, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_12, (0.0500000007f), NULL);
+		L_13 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_12, (0.100000001f), NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14;
 		L_14 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_13, NULL);
 		NullCheck(L_8);
 		Rigidbody2D_AddForce_mDD5CAE0137A42660C2D585B090D7E24496976E1B(L_8, L_14, 1, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:99>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:97>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_15 = __this->___anim;
 		NullCheck(L_15);
 		Animator_Play_m9B1CB1A22951C0B0758AA032F2349B6DD20E96C2(L_15, _stringLiteral3148CB4F437A70B5725CD94576BB8538AA361B62, 0, NULL);
@@ -1751,7 +1751,7 @@ IL_003b:
 
 IL_009a:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:103>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:101>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_16 = __this->___buttonControls;
 		NullCheck(L_16);
 		bool L_17 = L_16->___leftDetected;
@@ -1772,9 +1772,9 @@ IL_009a:
 
 IL_00b4:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:105>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:103>
 		__this->___turnState = 0;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:106>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:104>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_20 = __this->___buttonControls;
 		NullCheck(L_20);
 		bool L_21 = L_20->___leftDetected;
@@ -1806,16 +1806,16 @@ IL_00cd:
 
 IL_00d3:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:111>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:109>
 		__this->___turnState = 1;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:112>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:110>
 		__this->___dir = 0;
 		return;
 	}
 
 IL_00e2:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:118>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:116>
 		ButtonControls_t8BCBACF2A4F3EA80AD35A1D947A71BB3F1970C92* L_22 = __this->___buttonControls;
 		NullCheck(L_22);
 		bool L_23 = L_22->___thrustDetected;
@@ -1832,13 +1832,13 @@ IL_00e2:
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:120>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:118>
 		PlayerController_StartBoost_m14B361D2673B2764490174DE0A4C56D7C53FB24A(__this, NULL);
 	}
 
 IL_00fd:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:123>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:121>
 		return;
 	}
 }
@@ -1865,7 +1865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_StartStateSwi
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_StartBoost_m14B361D2673B2764490174DE0A4C56D7C53FB24A (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:136>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:134>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_0 = __this->___rb;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
@@ -1875,14 +1875,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_StartBoost_m14B361D2673
 		L_3 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_2, NULL);
 		NullCheck(L_0);
 		Rigidbody2D_AddForce_mDD5CAE0137A42660C2D585B090D7E24496976E1B(L_0, L_3, 1, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:137>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:135>
 		__this->___hasStarted = (bool)1;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:139>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:137>
 		RuntimeObject* L_4;
 		L_4 = PlayerController_StartStateSwitch_m53519D034CCB5502A6BF81A5A91D6A75DF511DF0(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:140>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:138>
 		return;
 	}
 }
@@ -1896,15 +1896,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Explode_mD39440F8074807
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:144>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:142>
+		__this->___state = 0;
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:143>
 		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_0 = __this->___rb;
 		NullCheck(L_0);
 		Rigidbody2D_set_simulated_m38E0BD6581E907DD87059034C4B2E8D47BBFE71D(L_0, (bool)0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:145>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:144>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->___anim;
 		NullCheck(L_1);
 		Animator_Play_m9B1CB1A22951C0B0758AA032F2349B6DD20E96C2(L_1, _stringLiteral514A8AD09809280423A1825FBE8D19B2AB1AD4F4, 0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:146>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:145>
 		return;
 	}
 }
@@ -1920,7 +1922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnCollisionEnter2D_m28C
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:151>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:150>
 		Collision2D_t81E83212C969FDDE2AB84EBCA31502818EEAB85B* L_0 = ___0_other;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -1934,7 +1936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnCollisionEnter2D_m28C
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:153>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:152>
 		Collision2D_t81E83212C969FDDE2AB84EBCA31502818EEAB85B* L_3 = ___0_other;
 		NullCheck(L_3);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
@@ -1942,7 +1944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnCollisionEnter2D_m28C
 		V_0 = L_4;
 		float L_5;
 		L_5 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_0), NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:155>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:154>
 		float L_6 = __this->___crashSpeed;
 		if ((!(((float)L_5) > ((float)L_6))))
 		{
@@ -1950,13 +1952,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnCollisionEnter2D_m28C
 		}
 	}
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:157>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:156>
 		GameEvents_InvokeLevelFailed_m1FEF535697F0BB2817352E45CBA494CAB39458F0(NULL);
 	}
 
 IL_002d:
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:160>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:159>
 		return;
 	}
 }
@@ -1964,15 +1966,15 @@ IL_002d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:21>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:19>
 		__this->___turnSpeed = (6.0f);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:21>
-		__this->___thrustForce = (15.0f);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:21>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:19>
+		__this->___thrustForce = (12.5f);
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:19>
 		__this->___maxVelocity = (80.0f);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:21>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:19>
 		__this->___defaultGravity = (1.5f);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:21>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:19>
 		__this->___crashSpeed = (9.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -2040,7 +2042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartStateSwitchU3Ed__17_MoveNext_mB2
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:127>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:125>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -2052,19 +2054,19 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:129>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:127>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_5 = V_1;
 		NullCheck(L_5);
 		L_5->___state = 1;
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:130>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:128>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_6 = V_1;
 		NullCheck(L_6);
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_7 = L_6->___anim;
 		NullCheck(L_7);
 		Animator_Play_m9B1CB1A22951C0B0758AA032F2349B6DD20E96C2(L_7, _stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA, 0, NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:131>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:129>
 		GameEvents_InvokeLevelStarted_mCDBA727B7CECF83A0BA3202BC461E314A6C255B2(NULL);
-		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:132>
+		//<source_info:C:/Users/finle/OneDrive/Coding/Personal Projects/Cosmic-Cruiser/Assets/Scripts/PlayerController.cs:130>
 		return (bool)0;
 	}
 }

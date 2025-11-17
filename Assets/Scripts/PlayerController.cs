@@ -16,7 +16,7 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    readonly float turnSpeed = 6f, thrustForce = 15f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
+    readonly float turnSpeed = 6f, thrustForce = 12.5f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
     bool hasStarted = false;
     int dir = 0; // 1 left, -1 right
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             else if (buttonControls.thrustDetected && state == BoostStates.Idle)
             {
                 state = BoostStates.Boosting;
-                rb.AddForce(transform.up * thrustForce * 0.05f, ForceMode2D.Impulse);
+                rb.AddForce(transform.up * thrustForce * 0.1f, ForceMode2D.Impulse);
                 anim.Play("Thrust_Start", 0);
             }
 
@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
 
     void Explode()
     {
+        state = BoostStates.Locked;
         rb.simulated = false;
         anim.Play("Explode", 0);
     }
