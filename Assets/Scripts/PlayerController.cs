@@ -1,7 +1,5 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public enum BoostStates
 {
@@ -18,44 +16,34 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    readonly float turnSpeed = 5f, thrustForce = 20f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 8f;
+    readonly float turnSpeed = 6f, thrustForce = 15f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
     bool hasStarted = false;
     int dir = 0; // 1 left, -1 right
 
-    [SerializeField] TextMeshProUGUI statesDebugText, turnStatesDebugText;
-    [SerializeField] GameObject fire;
-
     ButtonControls buttonControls;
     Rigidbody2D rb;
+    Animator anim;
 
     public BoostStates state;
     public TurnStates turnState;
+
+    private void Awake()
+    {
+        GameEvents.OnGameOver += Explode;
+    }
 
     void Start()
     {
         buttonControls = ButtonControls.instance;
 
         rb = GetComponent<Rigidbody2D>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         state = BoostStates.Locked;
     }
 
     void Update()
     {
         CheckForInput();
-
-        statesDebugText.text = "State: " + state.ToString();
-        turnStatesDebugText.text = "Turn State: " + turnState.ToString();
-
-        // temp fire effect
-        if (state == BoostStates.Boosting)
-        {
-            fire.SetActive(true);
-        }
-
-        else
-        {
-            fire.SetActive(false);
-        }
     }
 
     private void FixedUpdate()
@@ -76,7 +64,7 @@ public class PlayerController : MonoBehaviour
         // Apply thrust force when in boosting state
         if (state == BoostStates.Boosting)
         {
-            rb.gravityScale = 0.25f;
+            rb.gravityScale = 0.5f;
 
             rb.AddForce(transform.up * thrustForce);
         }
@@ -99,14 +87,14 @@ public class PlayerController : MonoBehaviour
             if (!buttonControls.thrustDetected && state == BoostStates.Boosting)
             {
                 state = BoostStates.Idle;
-                Debug.Log("Switching to Idle");
+                anim.Play("Idle", 0);
             }
 
             else if (buttonControls.thrustDetected && state == BoostStates.Idle)
             {
                 state = BoostStates.Boosting;
                 rb.AddForce(transform.up * thrustForce * 0.05f, ForceMode2D.Impulse);
-                Debug.Log("Switching to Boosting");
+                anim.Play("Thrust_Start", 0);
             }
 
             // Manages turning states
@@ -132,20 +120,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator StateSwitch()
+    IEnumerator StartStateSwitch()
     {
         yield return new WaitForSeconds(0.5f);
 
         state = BoostStates.Idle;
+        anim.Play("Idle", 0);
         GameEvents.InvokeLevelStarted();
     }
 
     void StartBoost()
     {
-        rb.AddForce(Vector3.up * 8f, ForceMode2D.Impulse);
+        rb.AddForce(Vector3.up * 6f, ForceMode2D.Impulse);
         hasStarted = true;
 
-        StartCoroutine(StateSwitch());
+        StartCoroutine(StartStateSwitch());
+    }
+
+    void Explode()
+    {
+        rb.simulated = false;
+        anim.Play("Explode", 0);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

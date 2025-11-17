@@ -299,6 +299,7 @@ UnityEngine.AnimationCurve::set_keys_Injected
 UnityEngine.Animations.AnimationLayerMixerPlayable::SetSingleLayerOptimizationInternal
 UnityEngine.Animator::get_hasBoundPlayables_Injected
 UnityEngine.Animator::StringToHash_Injected
+UnityEngine.Animator::Play_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
 UnityEngine.Animator::SetTriggerString_Injected
 UnityEngine.Application::get_isBatchMode
@@ -308,8 +309,6 @@ UnityEngine.Application::get_runInBackground
 UnityEngine.Application::OpenURL_Injected
 UnityEngine.Application::get_streamingAssetsPath_Injected
 UnityEngine.Application::get_platform
-UnityEngine.AsyncOperation::InternalDestroy
-UnityEngine.AsyncOperation::InternalSetManagedObject
 UnityEngine.AudioSettings::StartAudioOutput
 UnityEngine.AudioSettings::StopAudioOutput
 UnityEngine.Awaitable::IsNativeAwaitableCompleted
@@ -574,6 +573,7 @@ UnityEngine.Font::Internal_CreateFont_Injected
 UnityEngine.FrameTimingManager::GetLatestTimings_Injected
 UnityEngine.FrameTimingManager::CaptureFrameTimings
 UnityEngine.GameObject::GetComponentsInternal_Injected
+UnityEngine.GameObject::CompareTag_Internal_Injected
 UnityEngine.GameObject::get_activeInHierarchy_Injected
 UnityEngine.GameObject::get_activeSelf_Injected
 UnityEngine.GameObject::get_layer_Injected
@@ -740,7 +740,6 @@ UnityEngine.HDROutputSettings::SetAutomaticHDRTonemapping
 UnityEngine.HDROutputSettings::GetDisplayColorGamut
 UnityEngine.HDROutputSettings::GetGraphicsFormat
 UnityEngine.Input::CheckDisabled
-UnityEngine.Input::GetKeyDownInt
 UnityEngine.Input::GetKeyInt
 UnityEngine.Input::GetMouseButton
 UnityEngine.Input::GetMouseButtonDown
@@ -1386,17 +1385,14 @@ UnityEngine.Rigidbody2D::AddTorque_Injected
 UnityEngine.Rigidbody2D::get_linearVelocity_Injected
 UnityEngine.Rigidbody2D::get_localToWorldMatrix_Injected
 UnityEngine.Rigidbody2D::set_angularDamping_Injected
-UnityEngine.Rigidbody2D::set_linearDamping_Injected
+UnityEngine.Rigidbody2D::set_gravityScale_Injected
 UnityEngine.Rigidbody2D::set_linearVelocity_Injected
+UnityEngine.Rigidbody2D::set_simulated_Injected
 UnityEngine.ScalableBufferManager::get_heightScaleFactor
 UnityEngine.ScalableBufferManager::get_widthScaleFactor
 UnityEngine.ScalableBufferManager::ResizeBuffers
-UnityEngine.SceneManagement.Scene::GetBuildIndexInternal
 UnityEngine.SceneManagement.Scene::GetGUIDInternal_Injected
-UnityEngine.SceneManagement.SceneManager::get_sceneCount
 UnityEngine.SceneManagement.SceneManager::GetActiveScene_Injected
-UnityEngine.SceneManagement.SceneManager::GetSceneAt_Injected
-UnityEngine.SceneManagement.SceneManagerAPIInternal::LoadSceneAsyncNameIndexInternal_Injected
 UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::GetMSAASamples
 UnityEngine.Screen::get_height

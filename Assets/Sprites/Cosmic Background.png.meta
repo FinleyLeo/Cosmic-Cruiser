@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: 9db7c80b0d87258418bd201f2e875980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3178759944562389499
+    second: Cosmic Background_0
+  - first:
+      213: 4952697137319371833
+    second: Cosmic Background_1
+  - first:
+      213: -400730014596385391
+    second: Cosmic Background_2
+  - first:
+      213: 3958852075095807903
+    second: Cosmic Background_3
+  - first:
+      213: 7034620177684057311
+    second: Cosmic Background_4
+  - first:
+      213: -4664052887559270397
+    second: Cosmic Background_5
+  - first:
+      213: -4830224082485089438
+    second: Cosmic Background_6
+  - first:
+      213: 6238688784447454485
+    second: Cosmic Background_7
+  - first:
+      213: -5390036091404220083
+    second: Cosmic Background_8
+  - first:
+      213: 7149826276129289750
+    second: Cosmic Background_9
+  - first:
+      213: -6264223306145869516
+    second: Cosmic Background_10
+  - first:
+      213: 1696773026137412597
+    second: Cosmic Background_11
+  - first:
+      213: 7051464114889445576
+    second: Cosmic Background_12
+  - first:
+      213: 2263606044074947224
+    second: Cosmic Background_13
+  - first:
+      213: 4724233024024375564
+    second: Cosmic Background_14
+  - first:
+      213: -5461116024704649387
+    second: Cosmic Background_15
+  - first:
+      213: 3760859998432150349
+    second: Cosmic Background_16
+  - first:
+      213: -4895861036902237603
+    second: Cosmic Background_17
+  - first:
+      213: -3450798873743067023
+    second: Cosmic Background_18
+  - first:
+      213: -7681692983007277529
+    second: Cosmic Background_19
+  - first:
+      213: -3786852484964301329
+    second: Cosmic Background_20
+  - first:
+      213: 1113920347899236186
+    second: Cosmic Background_21
+  - first:
+      213: 6962484470373184741
+    second: Cosmic Background_22
+  - first:
+      213: -3169486231439548698
+    second: Cosmic Background_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cosmic Background_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 380
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e4e161ca6c2e3d0800000000000000
+      internalID: -3178759944562389499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cosmic Background_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 380
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934e30e4ec38bb440800000000000000
+      internalID: 4952697137319371833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cosmic Background_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1953525cc22507af0800000000000000
+      internalID: -400730014596385391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e6c0e5b421cf0404d98209da695c7180
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":380.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cosmic Background_0: -3178759944562389499
+      Cosmic Background_1: 4952697137319371833
+      Cosmic Background_2: -400730014596385391
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
