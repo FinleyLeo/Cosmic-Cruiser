@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LevelScriptableObject", menuName = "Scriptable Objects/LevelData")]
 public class LevelData : ScriptableObject
 {
-    [SerializeField] string levelName;
-    [SerializeField] float timeTaken;
-    [SerializeField] int levelIndex, flipsDone, collectedStars;
-    [SerializeField] bool isUnlockedByDefault;
+    public string levelName;
+    public float timeTaken;
+    public int levelIndex, flipsDone, collectedStars;
+    public bool isUnlockedByDefault;
 }

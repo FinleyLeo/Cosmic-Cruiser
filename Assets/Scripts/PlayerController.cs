@@ -21,19 +21,16 @@ public class PlayerController : MonoBehaviour
     int dir = 0; // 1 left, -1 right
 
     ButtonControls buttonControls;
-    Rigidbody2D rb;
-    Animator anim;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator anim;
 
     public BoostStates state;
     public TurnStates turnState;
 
-    private void Awake()
-    {
-        GameEvents.OnGameOver += Explode;
-    }
-
     void Start()
     {
+        //GameEvents.OnGameOver += Explode;
+
         buttonControls = ButtonControls.instance;
 
         rb = GetComponent<Rigidbody2D>();
@@ -131,23 +128,29 @@ public class PlayerController : MonoBehaviour
 
     void StartBoost()
     {
+        rb.simulated = true;
         rb.AddForce(Vector3.up * 6f, ForceMode2D.Impulse);
         hasStarted = true;
 
         StartCoroutine(StartStateSwitch());
     }
 
-    void Explode()
-    {
-        state = BoostStates.Locked;
-        rb.simulated = false;
-        anim.Play("Explode", 0);
-    }
+    //void Explode()
+    //{
+    //    state = BoostStates.Locked;
+    //    rb.simulated = false;
+    //    anim.Play("Explode", 0);
+    //}
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // Only explode if hitting wall at high enough speed
-        if (other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            GameEvents.InvokeLevelFailed();
+        }
+
+        // If not an obstacle, checks impact speed to check for crash
+        else
         {
             float impactSpeed = other.relativeVelocity.magnitude;
 

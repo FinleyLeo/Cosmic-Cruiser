@@ -10,5 +10,9 @@ public static class GameEvents
     public static void InvokeLevelStarted() => OnLevelStart?.Invoke();
     public static void InvokeLevelCompleted() => OnGameWin?.Invoke();
     public static void InvokeLevelRestarted() => OnLevelReset?.Invoke();
-    public static void InvokeLevelFailed() => OnGameOver?.Invoke();
+    public static void InvokeLevelFailed()
+    {
+        OnGameOver?.Invoke();
+        InvokeLevelRestarted();
+    }
 }

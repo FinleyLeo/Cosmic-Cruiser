@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f69915df93d82440a4147d2ef7e8fd9, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::LevelScriptableObject
+  levelName: Test Level
   timeTaken: 10.32
-  levelIndex: 2
+  levelIndex: 0
+  flipsDone: 12
+  collectedStars: 3
+  isUnlockedByDefault: 1

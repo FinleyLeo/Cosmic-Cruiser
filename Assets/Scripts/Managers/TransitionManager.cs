@@ -19,6 +19,8 @@ public class TransitionManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        GameEvents.OnLevelReset += RestartLevel;
     }
 
     public void SwitchScene(int buildIndex, float delay)
@@ -28,12 +30,12 @@ public class TransitionManager : MonoBehaviour
 
     IEnumerator LoadLevel(int buildIndex, float delay)
     {
-        transAnim.Play("FadeIn");
+        transAnim.Play("FadeOut");
 
         yield return new WaitForSeconds(delay);
 
         SceneManager.LoadScene(buildIndex);
-        transAnim.Play("FadeOut");
+        transAnim.Play("FadeIn");
     }
 
     public void RestartLevel()
