@@ -1,32 +1,39 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour
 {
-    [SerializeField] LevelData levelData;
-    bool isLocked = true;
+    public Button button;
+    LevelSelectManager manager;
+    public TextMeshProUGUI levelNameText, timeText, collectText;
 
-    private void Start()
+    int levelIndex;
+
+    public void SetData(LevelData data, LevelProgress progress, LevelSelectManager m)
     {
-        if (levelData.isUnlockedByDefault)
+        levelNameText.text = data.levelName;
+        manager = m;
+
+        if (!progress.isUnlocked)
         {
-            isLocked = false;
+            // Set colour to greyed out
+            timeText.text = "-";
+            collectText.text = "-";
+            return;
         }
 
-        // Grey out or change sprite, dont allow it to be interacted with
-        if (isLocked)
-        {
+        // Set colour to normal
 
-        }
+        // Set text to either best time or "-" based on if there is a best time
+        timeText.text = progress.bestTime > 0 ? progress.bestTime.ToString() : "-";
+        collectText.text = progress.starsEarned.ToString() + " / " + data.totalStars.ToString();
 
-        // Allow interactions, sending player to corresponding level
-        else
-        {
-
-        }
+        button.onClick.AddListener(OnClicked);
     }
 
-    private void Update()
+    void OnClicked()
     {
-        
+        manager.LoadLevel(levelIndex);
     }
 }
