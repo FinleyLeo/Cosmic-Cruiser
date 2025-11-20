@@ -3,17 +3,23 @@ using UnityEngine;
 
 public class LevelRuntime : MonoBehaviour
 {
-    bool isLevelActive = false;
+    public bool isLevelActive = false;
     public float timer;
     public int starsCollected;
 
     [SerializeField] TextMeshProUGUI timerGUI;
 
-    void Awake()
+    private void OnEnable()
     {
         // Makes isLevelActive true when level starts
         GameEvents.OnLevelStart += () => isLevelActive = true;
         GameEvents.OnGameWin += OnWin;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnLevelStart -= () => isLevelActive = true;
+        GameEvents.OnGameWin -= OnWin;
     }
 
     // Update is called once per frame

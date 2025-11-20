@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7214686557407298587}
   - component: {fileID: 5860802777313096326}
+  - component: {fileID: 6436651493933540318}
   - component: {fileID: 7052967524652253219}
   - component: {fileID: 1216395798118849424}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +48,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5240f8b918a1db249b2a05022e3e12bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  angularVelZ: 0
+  rb: {fileID: 0}
+  anim: {fileID: 0}
   state: 0
   turnState: 0
+--- !u!114 &6436651493933540318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523103158502814565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72dcb384f2c28d1448f63fe2b3d39cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsCheck
 --- !u!50 &7052967524652253219
 Rigidbody2D:
   serializedVersion: 5
@@ -238,7 +254,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.15
       minScalar: 5
       maxCurve:
         serializedVersion: 2

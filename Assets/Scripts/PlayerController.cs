@@ -16,21 +16,30 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    readonly float turnSpeed = 6f, thrustForce = 12.5f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
+    readonly float turnSpeed = 12f, thrustForce = 12.5f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
+    float angularVelZ = 0;
     bool hasStarted = false;
     int dir = 0; // 1 left, -1 right
 
     ButtonControls buttonControls;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] Animator anim;
+    Rigidbody2D rb;
+    Animator anim;
 
     public BoostStates state;
     public TurnStates turnState;
 
+    private void OnEnable()
+    {
+        GameEvents.OnGameOver += Explode;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnGameOver -= Explode;
+    }
+
     void Start()
     {
-        //GameEvents.OnGameOver += Explode;
-
         buttonControls = ButtonControls.instance;
 
         rb = GetComponent<Rigidbody2D>();
@@ -40,24 +49,31 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        CheckForInput();
+        CheckForInput(); 
+
+        if (turnState == TurnStates.Turning)
+        {
+            angularVelZ += Time.deltaTime * dir * turnSpeed * 100f;
+        }
+
+        else
+        {
+            if (Mathf.Abs(angularVelZ) > 0.1f)
+            {
+                angularVelZ = Mathf.Lerp(rb.angularVelocity, 0f, Time.deltaTime * 5f);
+            }
+
+            else
+            {
+                angularVelZ = 0f;
+            }
+        }
+
+        rb.angularVelocity = angularVelZ;
     }
 
     private void FixedUpdate()
     {
-        // Apply turning torque when in turning state
-        if (turnState == TurnStates.Turning)
-        {
-            rb.angularDamping = 1f;
-            rb.AddTorque(dir * turnSpeed);
-        }
-
-        // Apply angular damping when not turning
-        else
-        {
-            rb.angularDamping = 15f;
-        }
-
         // Apply thrust force when in boosting state
         if (state == BoostStates.Boosting)
         {
@@ -73,6 +89,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Clamp the maximum velocity
+        rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -600f, 600f);
         rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
     }
 
@@ -97,14 +114,20 @@ public class PlayerController : MonoBehaviour
             // Manages turning states
             if (buttonControls.leftDetected || buttonControls.rightDetected)
             {
-                turnState = TurnStates.Turning;
-                dir = buttonControls.leftDetected ? 1 : -1;
+                if (turnState == TurnStates.None)
+                {
+                    turnState = TurnStates.Turning;
+                    dir = buttonControls.leftDetected ? 1 : -1;
+                }
             }
 
             else
             {
-                turnState = TurnStates.None;
-                dir = 0;
+                if (turnState == TurnStates.Turning)
+                {
+                    turnState = TurnStates.None;
+                    dir = 0;
+                }
             }
         }
 
@@ -135,22 +158,17 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(StartStateSwitch());
     }
 
-    //void Explode()
-    //{
-    //    state = BoostStates.Locked;
-    //    rb.simulated = false;
-    //    anim.Play("Explode", 0);
-    //}
+    void Explode()
+    {
+        state = BoostStates.Locked;
+        rb.simulated = false;
+        anim.Play("Explode", 0);
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
-        {
-            GameEvents.InvokeLevelFailed();
-        }
-
         // If not an obstacle, checks impact speed to check for crash
-        else
+        if (!other.gameObject.CompareTag("Obstacle"))
         {
             float impactSpeed = other.relativeVelocity.magnitude;
 
@@ -160,5 +178,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-}
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            GameEvents.InvokeLevelFailed();
+        }
+    }
+}

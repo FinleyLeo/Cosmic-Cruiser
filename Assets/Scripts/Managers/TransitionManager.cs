@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,8 +20,16 @@ public class TransitionManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    private void OnEnable()
+    {
         GameEvents.OnLevelReset += RestartLevel;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnLevelReset -= RestartLevel;
     }
 
     public void SwitchScene(int buildIndex, float delay)
@@ -30,11 +39,16 @@ public class TransitionManager : MonoBehaviour
 
     IEnumerator LoadLevel(int buildIndex, float delay)
     {
-        transAnim.Play("FadeOut");
-
         yield return new WaitForSeconds(delay);
 
+        transAnim.Play("FadeOut");
+
+        yield return new WaitForSeconds(transAnim.GetCurrentAnimatorStateInfo(0).length);
+
         SceneManager.LoadScene(buildIndex);
+
+        yield return new WaitForSeconds(0.2f);
+
         transAnim.Play("FadeIn");
     }
 
