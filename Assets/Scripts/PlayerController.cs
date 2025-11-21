@@ -16,7 +16,7 @@ public enum TurnStates
 
 public class PlayerController : MonoBehaviour
 {
-    readonly float turnSpeed = 12f, thrustForce = 12.5f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 9f;
+    readonly float turnSpeed = 12f, thrustForce = 12.5f, maxVelocity = 80f, defaultGravity = 1.5f, crashSpeed = 12f;
     float angularVelZ = 0;
     bool hasStarted = false;
     int dir = 0; // 1 left, -1 right

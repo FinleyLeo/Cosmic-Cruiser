@@ -7,6 +7,6 @@ public class BootstrapScript : MonoBehaviour
     void Start()
     {
         // temp
-        SceneManager.LoadScene("Prototyping");
+        TransitionManager.instance.SwitchScene("Main Menu");
     }
 }

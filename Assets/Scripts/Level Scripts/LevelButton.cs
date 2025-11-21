@@ -6,7 +6,9 @@ public class LevelButton : MonoBehaviour
 {
     public Button button;
     LevelSelectManager manager;
-    public TextMeshProUGUI levelNameText, timeText, collectText;
+    public TextMeshProUGUI levelNameText, timeText;
+    public Sprite starOn, starOff;
+    public Image[] stars;
 
     int levelIndex;
 
@@ -19,7 +21,7 @@ public class LevelButton : MonoBehaviour
         {
             // Set colour to greyed out
             timeText.text = "-";
-            collectText.text = "-";
+            button.enabled = false;
             return;
         }
 
@@ -27,8 +29,14 @@ public class LevelButton : MonoBehaviour
 
         // Set text to either best time or "-" based on if there is a best time
         timeText.text = progress.bestTime > 0 ? progress.bestTime.ToString() : "-";
-        collectText.text = progress.starsEarned.ToString() + " / " + data.totalStars.ToString();
 
+        for (int i = 0; i < progress.starsEarned; i++)
+        {
+            stars[i].sprite = starOn;
+            stars[i].color = Color.yellow;
+        }
+
+        levelIndex = data.levelIndex;
         button.onClick.AddListener(OnClicked);
     }
 
