@@ -9,8 +9,17 @@ public class LevelButton : MonoBehaviour
     public TextMeshProUGUI levelNameText, timeText;
     public Sprite starOn, starOff;
     public Image[] stars;
+    Vector3 startPos;
+    int ranDelayY, ranDelayX;
 
     int levelIndex;
+
+    private void Start()
+    {
+        startPos = transform.position;
+        ranDelayY = Random.Range(0, 200);
+        ranDelayX = Random.Range(0, 200);
+    }
 
     public void SetData(LevelData data, LevelProgress progress, LevelSelectManager m)
     {
@@ -43,5 +52,11 @@ public class LevelButton : MonoBehaviour
     void OnClicked()
     {
         manager.LoadLevel(levelIndex);
+    }
+
+    void Update()
+    {
+        // SLight shake effect
+        transform.position = startPos + new Vector3(Mathf.Sin(Time.time + ranDelayX) * 0.05f, Mathf.Sin(Time.time + ranDelayY) * 0.1f, 0);
     }
 }

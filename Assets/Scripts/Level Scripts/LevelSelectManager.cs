@@ -47,8 +47,8 @@ public class LevelSelectManager : MonoBehaviour
             LevelData levelData = levels[i];
             LevelProgress levelProgress = ProgressManager.Instance.LoadLevelProgress(i, levelData.isUnlockedByDefault);
 
-            float ranX = Random.Range(-2f, 2f);
-            float ranY = Random.Range(-0.5f, 0.5f);
+            float ranX = Random.Range(-1.8f, 1.8f);
+            float ranY = Random.Range(-0.1f, 0.1f);
 
             Vector3 spawnPos = new Vector2(ranX, (i * 2) - 3.5f + ranY);
             linePointsArray[i] = spawnPos;
